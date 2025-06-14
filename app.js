@@ -2,6 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const taskRoutes = require('./routes/tasks');
+const errorHandler = require('./middleware/errorHandler');
+
+
 
 dotenv.config();
 
@@ -10,6 +13,8 @@ app.use(express.json());
 
 // Routes
 app.use('/tasks', taskRoutes);
+
+app.use(errorHandler);
 
 // MongoDB connection — simplified without deprecated options
 mongoose.connect(process.env.MONGO_URI)

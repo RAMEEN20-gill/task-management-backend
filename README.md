@@ -1,4 +1,4 @@
-#  Daily Task Log – Week 1
+# Week 1
 
 This repository contains the daily task logs for Week 1 of my project (Task Management System).
 
